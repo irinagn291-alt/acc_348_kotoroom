@@ -89,10 +89,14 @@ targets:
     type: application
     platform: watchOS
     sources:
+      - path: PiproomWatch
     - PiproomWatch
     - Shared
     settings:
       base:
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: 2
         TARGETED_DEVICE_FAMILY: '4'
         PRODUCT_BUNDLE_IDENTIFIER: app.piproom.iphone.watchkitapp
         INFOPLIST_KEY_CFBundleDisplayName: KOTOROOM

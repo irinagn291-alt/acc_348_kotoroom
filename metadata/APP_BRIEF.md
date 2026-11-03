@@ -1,4 +1,4 @@
-<!-- gf-brief source=1a7beddd4eabd92ca5dd21465525854f6faec22844de6a0aafbc6aa156a31d54 written=2026-11-03T21:03:29+03:00 -->
+<!-- gf-brief source=7d20a703b6fb91bc2c773248066d10b721202cd66eb09e8ba720f925f3948d83 written=2026-11-03T21:06:02+03:00 -->
 # KOTOROOM
 
 ## What it is
