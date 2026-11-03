@@ -98,12 +98,14 @@ struct VaultFiles {
               [UTType.jpeg, .png, .heic, .heif].contains(where: { kind.conforms(to: $0) }) else {
             throw VaultError("Choose an unedited JPEG, HEIC, PNG or Live Photo. This format stays in Photos.")
         }
+        #if compiler(>=6.4)
         if #available(iOS 27, *) {
             let sizes = resources.compactMap { $0.dataSize.map { Int64($0) } }
             if sizes.count == resources.count {
                 try requireSpace(for: sizes.reduce(0, +) + (sizes.max() ?? 0))
             }
         }
+        #endif
         let work = try workFolder()
         defer { try? FileManager.default.removeItem(at: work) }
         let id = UUID().uuidString

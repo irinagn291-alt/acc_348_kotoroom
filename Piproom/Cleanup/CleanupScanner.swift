@@ -155,11 +155,15 @@ actor CleanupScanner {
     }
 
     private static func metadataSize(_ asset: PHAsset) -> Int64? {
+        #if compiler(>=6.4)
         guard #available(iOS 27, *) else { return nil }
         let resources = PHAssetResource.assetResources(for: asset)
         let sizes = resources.compactMap(\.dataSize)
         guard !resources.isEmpty, sizes.count == resources.count, sizes.allSatisfy({ $0 > 0 }) else { return nil }
         return sizes.reduce(Int64(0)) { $0 + Int64($1) }
+        #else
+        return nil
+        #endif
     }
 
     // Hash each resource separately. Resource roles, types and multiplicity form part of the identity.
