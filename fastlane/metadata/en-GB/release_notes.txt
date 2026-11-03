@@ -1,0 +1,1 @@
+Initial release with monthly photo review, “Storage cleanup”, “Review bin”, “Protected albums”, “Secret Folder”, password and email tools, “Quiet reminders”, a widget and a companion watch view.

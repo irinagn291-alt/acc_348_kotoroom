@@ -1,0 +1,1 @@
+fotos,mensal,duplicatas,capturas,vídeos,armazenamento,senha,email

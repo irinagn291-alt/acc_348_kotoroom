@@ -1,0 +1,12 @@
+O KOTOROOM ajuda você a revisar sua fototeca mês a mês e encontrar itens que podem estar ocupando armazenamento.
+
+• Use “Manter”, “Lixeira” e “Desfazer último deslize” durante a revisão mensal.
+• Use “Jogar o dado” para escolher um mês ainda não concluído.
+• Explore “Limpeza de armazenamento” para encontrar “Duplicatas exatas”, “Capturas de tela”, “Vídeos grandes” e “Gravações de tela”.
+• Confira os itens em “Revisar lixeira” antes de mantê-los ou apagá-los do Fotos.
+• Use “Álbuns protegidos” para manter suas fotos fora da revisão e da lixeira.
+• Guarde fotos e Live Photos na “Pasta secreta” com um PIN e Face ID opcional.
+• Use “Gerador de senhas”, “Ideias de nomes de e-mail”, “Verificar uma senha” e “Verificar um e-mail”.
+• Continue com “Lembretes discretos”, o widget “Folha de contatos mensal” e uma visualização complementar para relógio.
+
+A “Pasta secreta” não tem backup. Guarde seu PIN em segurança e restaure as fotos antes de trocar de aparelho.

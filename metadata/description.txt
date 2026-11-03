@@ -1,0 +1,12 @@
+KOTOROOM helps people review their photo library a month at a time and find items that may be taking up storage.
+
+• Use “Keep”, “Bin” and “Undo last swipe” during monthly review.
+• Use “Roll the die” to pick an unfinished month.
+• Explore “Storage cleanup” for “Exact duplicates”, “Screenshots”, “Large videos” and “Screen recordings”.
+• Check items in “Review bin” before keeping them or deleting them from Photos.
+• Use “Protected albums” to keep their photos out of review and the bin.
+• Keep photos and Live Photos in “Secret Folder” with a PIN and optional Face ID.
+• Use “Password generator”, “Email name ideas”, “Check a password” and “Check an email”.
+• Continue with “Quiet reminders”, the “Monthly contact sheet” widget and a companion watch view.
+
+“Secret Folder” has no backup. Keep your PIN safe and restore photos before changing devices.

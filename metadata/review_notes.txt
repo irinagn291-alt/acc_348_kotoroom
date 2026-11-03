@@ -1,0 +1,11 @@
+Photos access is requested when opening a photo-review, cleanup or protection flow for the first time, or when adding to “Secret Folder”: “Choose photos for monthly review or import verified originals into your Secret Folder.” Add to Photos access is used when restoring a private photo to Photos: “Restore a selected Secret Folder photo to your Photos library.” Face ID is requested when enabling or using it for “Secret Folder”, where supported: “Use Face ID to unlock your Secret Folder on this iPhone.” Notifications are requested when enabling “Remind me to continue”; there is no separate usage-description string for this prompt.
+
+There is no login, in-app purchase, general user-generated content or publishing feature, account deletion flow, or App Tracking Transparency prompt. Users select and manage their own photos and enter text in the tools.
+
+KOTOROOM is for people who want to review their photo library a month at a time and find items that may be taking up storage. It also offers a PIN-protected photo collection, password and email-name tools, and breach checks.
+
+From a cold launch, a blank loading screen may briefly appear before the “KOTOROOM” desk; there is no separate onboarding walkthrough. Tap “Choose a month” and allow Photos access, then select a month in “Months”. Use “Keep” or “Bin”, and use “Undo last swipe” to reverse the most recent choice. Open “Review bin” to check selected items. From the desk, open “Storage cleanup”, “Protected albums”, “Tools” or “Quiet reminders”. Open “Secret Folder”, enter a PIN in “Create a six-digit PIN”, tap “Continue”, repeat it in “Confirm your PIN” and tap “Create folder”. No credentials or demo account are needed.
+
+Breach checks send partial password or email hashes, and “Open HIBP email search” opens an external service. No on-screen Contact or Support control was found.
+
+The brief does not establish whether behavior differs by region; the native interface uses English and U.S. formatting. No regulated-industry paperwork is indicated because the app does not provide health, medical or product-health information; licence requirements are not established in the brief. The app is a personal log only and gives no recommendations.
