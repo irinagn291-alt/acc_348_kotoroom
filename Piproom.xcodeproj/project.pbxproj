@@ -13,6 +13,7 @@
 		10096458D21DB34AE7AA42E2 /* Ink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238763D3D7587FEFAA5D2BA /* Ink.swift */; };
 		173EEF526D759CF84087CCC7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599A9E5E94C78978C6743BF6 /* Library.swift */; };
 		1B398E114B64E479422C48CB /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9D84D73D7E77B419920AB /* Design.swift */; };
+		1E9E3893B8A5B47D3C179DE0 /* StoreCaptureLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1FD17D3F10C81EE08BD0 /* StoreCaptureLaunch.swift */; };
 		21BF006FBFDF774BE29C6DF2 /* PrivacyShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FBC1AED41C3A423C3ED7C3 /* PrivacyShield.swift */; };
 		222F02E0F7AA33F4EA9B45A3 /* DeskSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED664D5D43E886ED1159600 /* DeskSnapshot.swift */; };
 		22AA6214E372E71DAA02BDFD /* ToolsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE328499B2114D349E1ECA /* ToolsScreen.swift */; };
@@ -26,16 +27,19 @@
 		4E2DAECA55AE37DA31EAC681 /* BreachClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B451C33109CB05ABA4A928 /* BreachClient.swift */; };
 		5234BA79F4087074C43518E7 /* Generators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C02DBFA3F3AE29A5C85176 /* Generators.swift */; };
 		5F97095A28D8EE8E4E6FED92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7259CC432048C82CE6C4D31 /* Assets.xcassets */; };
+		64659625C3E79177B945E0DB /* StoreCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625EDA0BD0F09D4EF471F4 /* StoreCapture.swift */; };
 		685C811D1796786A9AC8DB31 /* CleanupJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3142DBFEEF208DEE82418B64 /* CleanupJourneyTests.swift */; };
 		6FEC2C55E2CE756FFB516860 /* VaultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E48E418A806A820F77AFB8 /* VaultStore.swift */; };
 		72305EAC89774C6B80DFD6F8 /* Ink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238763D3D7587FEFAA5D2BA /* Ink.swift */; };
 		7956660B572D326C02377EC0 /* StorageRecording.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B1B165EA9D2E256F2F661ED3 /* StorageRecording.mp4 */; };
+		7AD86A0B50D375AB2C00C3BF /* StoreCaptureLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1FD17D3F10C81EE08BD0 /* StoreCaptureLaunch.swift */; };
 		8482F5DC9A4DE9F471E3FF29 /* PiproomWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 16DB40752C7984144847B0F4 /* PiproomWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		86C9F9A7E4AF3EB87AF7A298 /* QuietReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709285AD2FF84ED45EDC513 /* QuietReminders.swift */; };
 		97A4E71F7F8FECF387BF4BFC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F87893FC62CCF5305F518DC7 /* PrivacyInfo.xcprivacy */; };
 		981CCEB176772AC79FE3358B /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26215668E84809429C2918 /* PhotoImage.swift */; };
 		98FBD88B9A4E2258D8A77201 /* CleanupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5E17045129AAAA278E1350 /* CleanupScreen.swift */; };
 		9CE91FB2A212D8653879088B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847DE60D13549C018A76C13 /* AppDelegate.swift */; };
+		9E5E44B61854966DE0718D33 /* StoreCaptureLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1FD17D3F10C81EE08BD0 /* StoreCaptureLaunch.swift */; };
 		A18FA5C7D32CA3D4A8A99812 /* PiproomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF76C74A1A4A50A0B11242E /* PiproomApp.swift */; };
 		A4FBCFC0E2DA06F1E89BE383 /* CleanupRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F88EE4934CD254CF2D3CA65 /* CleanupRulesTests.swift */; };
 		A7F7866F8E86749120B37884 /* WidgetJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D30EE7026A660B5B768B29 /* WidgetJourneyTests.swift */; };
@@ -122,6 +126,7 @@
 		18F2FABDF08214F899AE2AF0 /* ReviewJourneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewJourneyTests.swift; sourceTree = "<group>"; };
 		1BA312B0093D9269AF69E239 /* PiproomWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiproomWidget.swift; sourceTree = "<group>"; };
 		261ACDEE523C56848246EA1A /* ReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewScreen.swift; sourceTree = "<group>"; };
+		2B7B1FD17D3F10C81EE08BD0 /* StoreCaptureLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCaptureLaunch.swift; sourceTree = "<group>"; };
 		3142DBFEEF208DEE82418B64 /* CleanupJourneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupJourneyTests.swift; sourceTree = "<group>"; };
 		3EB9D84D73D7E77B419920AB /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		3F88EE4934CD254CF2D3CA65 /* CleanupRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupRulesTests.swift; sourceTree = "<group>"; };
@@ -158,6 +163,7 @@
 		DB2C6AA83A7D28CA108A175F /* Piproom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Piproom.entitlements; sourceTree = "<group>"; };
 		E0D9BAEC452C6EDF8939CAB9 /* PiproomWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PiproomWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A92FCE60E2C359E882D20C /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		E7625EDA0BD0F09D4EF471F4 /* StoreCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCapture.swift; sourceTree = "<group>"; };
 		ED26215668E84809429C2918 /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
 		ED407ECB752A7479CAAC7388 /* VaultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultScreen.swift; sourceTree = "<group>"; };
 		F87893FC62CCF5305F518DC7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			children = (
 				9ED664D5D43E886ED1159600 /* DeskSnapshot.swift */,
 				5238763D3D7587FEFAA5D2BA /* Ink.swift */,
+				2B7B1FD17D3F10C81EE08BD0 /* StoreCaptureLaunch.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 				F87893FC62CCF5305F518DC7 /* PrivacyInfo.xcprivacy */,
 				B709285AD2FF84ED45EDC513 /* QuietReminders.swift */,
 				261ACDEE523C56848246EA1A /* ReviewScreen.swift */,
+				E7625EDA0BD0F09D4EF471F4 /* StoreCapture.swift */,
 				F5812EF528133BB4ECBBBE54 /* Cleanup */,
 				9F5D3794E85BD39AE202B632 /* Tools */,
 				EDF3F1EAFF93BFA2A5DB3AED /* Vault */,
@@ -521,6 +529,8 @@
 				21BF006FBFDF774BE29C6DF2 /* PrivacyShield.swift in Sources */,
 				86C9F9A7E4AF3EB87AF7A298 /* QuietReminders.swift in Sources */,
 				FF85AAFCAF845A6B2730BB6C /* ReviewScreen.swift in Sources */,
+				64659625C3E79177B945E0DB /* StoreCapture.swift in Sources */,
+				7AD86A0B50D375AB2C00C3BF /* StoreCaptureLaunch.swift in Sources */,
 				22AA6214E372E71DAA02BDFD /* ToolsScreen.swift in Sources */,
 				B2819C2467BBB08319D7BC96 /* VaultCredentials.swift in Sources */,
 				071D98BAC3A5BC1D5E53616E /* VaultFiles.swift in Sources */,
@@ -537,6 +547,7 @@
 				308A9D316DF0EAE5C1BA67C7 /* DeskSnapshot.swift in Sources */,
 				72305EAC89774C6B80DFD6F8 /* Ink.swift in Sources */,
 				CCDD38188274B951C610F976 /* PiproomWidget.swift in Sources */,
+				9E5E44B61854966DE0718D33 /* StoreCaptureLaunch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +558,7 @@
 				0FF008F648C143A09BD7D92A /* DeskSnapshot.swift in Sources */,
 				10096458D21DB34AE7AA42E2 /* Ink.swift in Sources */,
 				491AFEF0717B0774B2A2A66A /* PiproomWatch.swift in Sources */,
+				1E9E3893B8A5B47D3C179DE0 /* StoreCaptureLaunch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_KEY_CFBundleDisplayName = KOTOROOM;
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.piproom.iphone;
 				MARKETING_VERSION = 0.1.0;
@@ -640,7 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_KEY_CFBundleDisplayName = KOTOROOM;
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.piproom.iphone;
 				MARKETING_VERSION = 0.1.0;
@@ -685,7 +697,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -781,7 +793,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.piproom.iphone;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -799,7 +811,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.piproom.iphone.widget;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -855,7 +867,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
