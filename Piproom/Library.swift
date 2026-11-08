@@ -71,6 +71,12 @@ private struct Shelf {
         calendar.timeZone = .current
         options.predicate = NSPredicate(format: "mediaType IN %@", [PHAssetMediaType.image.rawValue, PHAssetMediaType.video.rawValue])
         PHAsset.fetchAssets(with: options).enumerateObjects { photo, _, _ in
+            #if DEBUG
+            if StoreCaptureLaunch.isEnabled,
+               !PHAssetResource.assetResources(for: photo).contains(where: { $0.originalFilename.hasPrefix("gf-kotoroom-") }) {
+                return
+            }
+            #endif
             guard !shelf.excluded.contains(photo.localIdentifier) else { return }
             shelf.byID[photo.localIdentifier] = photo
             if photo.mediaType == .image {
@@ -207,6 +213,55 @@ final class Library: NSObject, ObservableObject, PHPhotoLibraryChangeObserver {
     func waitForShelf() async {
         while loading, let pending = loadTask { await pending.value }
     }
+
+    #if DEBUG
+    /// Capture-only progress references actual seeded Photos assets and stays in memory.
+    func prepareStoreCapture() async {
+        guard StoreCaptureLaunch.isEnabled else { return }
+        await waitForShelf()
+        await normalizeStoreCaptureDates()
+        var captured = Journal()
+        for (index, month) in months.enumerated() {
+            let assets = photos(month)
+            let reviewed = index == 0 ? min(3, max(0, assets.count - 1)) : index == 1 ? assets.count : index == 2 ? min(4, assets.count) : 0
+            for (offset, asset) in assets.prefix(reviewed).enumerated() {
+                captured.sequence += 1
+                captured.marks[asset.localIdentifier] = Mark(choice: offset.isMultiple(of: 3) ? .basket : .keep, sequence: captured.sequence)
+            }
+        }
+        captured.lastMonth = months.first
+        journal = captured
+        notice = nil
+        if StoreCaptureLaunch.key == "storage-cleanup" {
+            setCleanupActive(true)
+            if let pending = scanTask { await pending.value }
+        }
+    }
+
+    private func normalizeStoreCaptureDates() async {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        let changes: [(PHAsset, Date)] = shelf.byID.values.compactMap { asset in
+            guard let filename = PHAssetResource.assetResources(for: asset).first(where: { $0.originalFilename.hasPrefix("gf-kotoroom-") })?.originalFilename else { return nil }
+            let parts = filename.split(separator: "-")
+            guard parts.count >= 4, let month = Int(parts[2]), (1...12).contains(month),
+                  let hour = Int(parts[3].split(separator: ".")[0]),
+                  let date = calendar.date(from: DateComponents(year: 2026, month: month, day: month == 11 ? 2 : 8, hour: hour % 24)),
+                  asset.creationDate.map({ abs($0.timeIntervalSince(date)) > 1 }) ?? true else { return nil }
+            return (asset, date)
+        }
+        guard !changes.isEmpty else { return }
+        do {
+            try await PHPhotoLibrary.shared().performChanges {
+                for (asset, date) in changes { PHAssetChangeRequest(for: asset).creationDate = date }
+            }
+            reload()
+            await waitForShelf()
+        } catch {
+            notice = "Capture seed dates could not be prepared: \(error.localizedDescription)"
+        }
+    }
+    #endif
 
     private func publishDesk() {
         guard hasAccess, !paused else {

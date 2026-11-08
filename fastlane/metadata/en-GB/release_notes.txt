@@ -1,1 +1,3 @@
-Initial release with monthly photo review, “Storage cleanup”, “Review bin”, “Protected albums”, “Secret Folder”, password and email tools, “Quiet reminders”, a widget and a companion watch view.
+Version 0.1.0 keeps KOTOROOM polished and reliable.
+• Stability and performance improvements
+• Small refinements throughout the app

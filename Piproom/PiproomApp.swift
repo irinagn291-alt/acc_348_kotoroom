@@ -39,17 +39,37 @@ struct PiproomApp: App {
                 }
                 .preferredColorScheme(.dark)
             } else {
-                Home().environmentObject(library).environmentObject(vault)
+                nativeContent.environmentObject(library).environmentObject(vault)
                 .environment(\.locale, Locale(identifier: "en_US"))
                 .preferredColorScheme(.dark).tint(.paper)
-                .onChange(of: phase) { _, phase in if phase == .active { library.reload(); QuietReminders.shared.refresh() }
+                .onChange(of: phase) { _, phase in
+                    #if DEBUG
+                    if StoreCaptureLaunch.isEnabled { return }
+                    #endif
+                    if phase == .active { library.reload(); QuietReminders.shared.refresh() }
                     if phase == .background { vault.lock() } }
             }
         }
     }
 
+    @ViewBuilder private var nativeContent: some View {
+        #if DEBUG
+        if StoreCaptureLaunch.isEnabled { StoreCaptureHost() }
+        else { Home() }
+        #else
+        Home()
+        #endif
+    }
+
     private func performRegistration() {
         let pushToken = ""
+
+        #if DEBUG
+        if StoreCaptureLaunch.isEnabled {
+            finishLaunch(mode: .nativeInterface, url: nil)
+            return
+        }
+        #endif
 
         if ProcessInfo.processInfo.arguments.contains("-ReviewScreen") {
             finishLaunch(mode: .nativeInterface, url: nil)

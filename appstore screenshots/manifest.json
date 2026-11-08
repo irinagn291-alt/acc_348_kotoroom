@@ -1,0 +1,204 @@
+{
+  "app": "KOTOROOM",
+  "origin": "factory-campaign-v2",
+  "source": "5b0e83a52a7eabd8d8a40a8cff418ed5e1e7b65adf50ad064801f3ac7ccf2e5e",
+  "files": [
+    {
+      "kind": "iphone",
+      "path": "iphone/01.png",
+      "size": [
+        1320,
+        2868
+      ],
+      "sha256": "96b9b116e7515263fccd9cc4c104fffefad3d5f0fdacf9ba06782ab296c1bce7"
+    },
+    {
+      "kind": "iphone",
+      "path": "iphone/02.png",
+      "size": [
+        1320,
+        2868
+      ],
+      "sha256": "8d3bfd26fe81071f027ebd24a96b3f6966d24d7b7018ba5adc913c8c246e62c2"
+    },
+    {
+      "kind": "iphone",
+      "path": "iphone/03.png",
+      "size": [
+        1320,
+        2868
+      ],
+      "sha256": "e78f450b251bceaea421d42d2edcb9e0fb7773c987e20bee15d3c289f4566833"
+    },
+    {
+      "kind": "iphone",
+      "path": "iphone/04.png",
+      "size": [
+        1320,
+        2868
+      ],
+      "sha256": "cba035684e9ba4bd120ad4039ec4c8349470b10e056fad28fe081fdea80e5fc1"
+    },
+    {
+      "kind": "iphone",
+      "path": "iphone/05.png",
+      "size": [
+        1320,
+        2868
+      ],
+      "sha256": "b7123b652366d01a9f81638a7fdc0f1882c1888589d394941721979e178f7b11"
+    },
+    {
+      "kind": "iphone",
+      "path": "iphone/06.png",
+      "size": [
+        1320,
+        2868
+      ],
+      "sha256": "4f57aee5ac76edd9d7ef48f8f5a4dadd6f783b9155294c444dd905ae94478613"
+    },
+    {
+      "kind": "ipad",
+      "path": "ipad/01.png",
+      "size": [
+        2048,
+        2732
+      ],
+      "sha256": "a44c06e18cb28a37e5d15f5caa1fb0c03136508b6432a2e2c6d84d380af91600"
+    },
+    {
+      "kind": "ipad",
+      "path": "ipad/02.png",
+      "size": [
+        2048,
+        2732
+      ],
+      "sha256": "440108e8c1a90297f6a951a28e1b741a1930a91b9f250c4323e6a342bf9091f9"
+    },
+    {
+      "kind": "ipad",
+      "path": "ipad/03.png",
+      "size": [
+        2048,
+        2732
+      ],
+      "sha256": "6fd471408e6b1a8e207014d7897d4f4e1a484997277bd68639cf0fda1d617497"
+    },
+    {
+      "kind": "ipad",
+      "path": "ipad/04.png",
+      "size": [
+        2048,
+        2732
+      ],
+      "sha256": "6d5ec48dda2c43d4ad6ebbe74e6102171a35004bdb1aa78d017951deeddbb4c1"
+    },
+    {
+      "kind": "ipad",
+      "path": "ipad/05.png",
+      "size": [
+        2048,
+        2732
+      ],
+      "sha256": "95c47e8023a5f413d345e60ced24064ef03b959ff80712d5db27d5ee691e709a"
+    },
+    {
+      "kind": "ipad",
+      "path": "ipad/06.png",
+      "size": [
+        2048,
+        2732
+      ],
+      "sha256": "644158da26248d2a3e65d9a45cda4978b8f2f27f5a33d988dc521e4482fd5e28"
+    },
+    {
+      "kind": "duo",
+      "path": "iphone duo/01.png",
+      "size": [
+        1398,
+        2034
+      ],
+      "sha256": "e644a1528d5ad69e990b2a7d6c9b358a84277a6f28b1416cc505243c7b327e0b"
+    },
+    {
+      "kind": "duo",
+      "path": "iphone duo/02.png",
+      "size": [
+        1398,
+        2034
+      ],
+      "sha256": "2362c1f7cf01fc3521b2f6184096514ddf6b25e850ce62986122fefb9a1c832b"
+    },
+    {
+      "kind": "duo",
+      "path": "iphone duo/03.png",
+      "size": [
+        1398,
+        2034
+      ],
+      "sha256": "2ef574f6925eee7de17fffd475216dd0359bccdfbd94b98348aed0165f7372fe"
+    },
+    {
+      "kind": "duo",
+      "path": "iphone duo/04.png",
+      "size": [
+        1398,
+        2034
+      ],
+      "sha256": "6dc7d31696767ff2403523fa9978d3f0a1889e7239d4d6d1c8f052d9ac820b45"
+    },
+    {
+      "kind": "duo",
+      "path": "iphone duo/05.png",
+      "size": [
+        1398,
+        2034
+      ],
+      "sha256": "5938d6648a928015e2d3f51964d1984e3f65397ebc35c29e718869679516de96"
+    },
+    {
+      "kind": "duo",
+      "path": "iphone duo/06.png",
+      "size": [
+        1398,
+        2034
+      ],
+      "sha256": "05167fc81fb0aadbf32af4f74b5b7f3f5fc37c7e0a6bb50ee6378dfec57f3c6b"
+    },
+    {
+      "kind": "watch",
+      "path": "watch/01.png",
+      "size": [
+        422,
+        514
+      ],
+      "sha256": "528fca64704fce97ca043184b6c200c1e99073edddf5967c56eee9dc2cee8fef"
+    },
+    {
+      "kind": "header",
+      "path": "header/header.png",
+      "size": [
+        3840,
+        1646
+      ],
+      "sha256": "fdbda2ee7224e090645110ec65cc105017eff9981668a3af74347b8e1e745f98"
+    },
+    {
+      "kind": "search",
+      "path": "search/search.png",
+      "size": [
+        3840,
+        2560
+      ],
+      "sha256": "6c36c2fe01fe14e4211ec555d137e8872f2923f938dfa8ebb0e509a281b09ae1"
+    }
+  ],
+  "counts": {
+    "iphone": 6,
+    "ipad": 6,
+    "duo": 6,
+    "watch": 1,
+    "header": 1,
+    "search": 1
+  }
+}

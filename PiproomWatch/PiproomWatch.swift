@@ -6,6 +6,14 @@ import WatchConnectivity
     private let cache = URL.applicationSupportDirectory.appending(path: "desk.json")
     override init() {
         super.init()
+        #if DEBUG
+        if StoreCaptureLaunch.isEnabled {
+            let focus = MonthProgress(year: 2026, month: 11, title: "November 2026", reviewed: 3, total: 24)
+            desk = DeskSnapshot(focus: focus, candidates: [focus,
+                MonthProgress(year: 2026, month: 9, title: "September 2026", reviewed: 4, total: 8)], binCount: 6)
+            return
+        }
+        #endif
         if let data = try? Data(contentsOf: cache) { desk = try? JSONDecoder().decode(DeskSnapshot.self, from: data) }
         if WCSession.isSupported() {
             WCSession.default.delegate = self
@@ -42,7 +50,7 @@ private struct WristView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
-                    Text("PIPROOM").font(.caption2.monospaced().bold()).tracking(1.4)
+                    Text("KOTOROOM").font(.caption2.monospaced().bold()).tracking(1.4)
                     Spacer()
                     Die().frame(width: 26, height: 26).rotationEffect(.degrees(Double(rolls) * 360))
                 }

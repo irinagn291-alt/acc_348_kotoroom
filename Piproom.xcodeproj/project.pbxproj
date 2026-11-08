@@ -138,7 +138,7 @@
 		599A9E5E94C78978C6743BF6 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		5A5E17045129AAAA278E1350 /* CleanupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupScreen.swift; sourceTree = "<group>"; };
 		5E6381EC5C7B721FC681442B /* PiproomVaultTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PiproomVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F481835661E17469ED7C385 /* Piproom.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Piproom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F481835661E17469ED7C385 /* Piproom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piproom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDE1325832AAF976E43384 /* PiproomWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiproomWidget.entitlements; sourceTree = "<group>"; };
 		6AF76C74A1A4A50A0B11242E /* PiproomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiproomApp.swift; sourceTree = "<group>"; };
 		8ABE328499B2114D349E1ECA /* ToolsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsScreen.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		A7927D95069FF94002E57F0A /* VaultCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultCredentials.swift; sourceTree = "<group>"; };
 		A847DE60D13549C018A76C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD3DC6CBDB07C5675D09851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B1B165EA9D2E256F2F661ED3 /* StorageRecording.mp4 */ = {isa = PBXFileReference; path = StorageRecording.mp4; sourceTree = "<group>"; };
+		B1B165EA9D2E256F2F661ED3 /* StorageRecording.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = StorageRecording.mp4; sourceTree = "<group>"; };
 		B3DAAFE0BAAB7F41070827FA /* VaultFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultFiles.swift; sourceTree = "<group>"; };
 		B531CFD647EFD628C814E21B /* ArchiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveTests.swift; sourceTree = "<group>"; };
 		B709285AD2FF84ED45EDC513 /* QuietReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuietReminders.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		E7625EDA0BD0F09D4EF471F4 /* StoreCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCapture.swift; sourceTree = "<group>"; };
 		ED26215668E84809429C2918 /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
 		ED407ECB752A7479CAAC7388 /* VaultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultScreen.swift; sourceTree = "<group>"; };
-		F87893FC62CCF5305F518DC7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F87893FC62CCF5305F518DC7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		F8C02DBFA3F3AE29A5C85176 /* Generators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -757,12 +757,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Piproom/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = KOTOROOM;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Use Face ID to unlock your Secret Folder on this iPhone.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Restore a selected Secret Folder photo to your Photos library.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choose photos for monthly review or import verified originals into your Secret Folder.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,12 +783,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Piproom/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = KOTOROOM;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Use Face ID to unlock your Secret Folder on this iPhone.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Restore a selected Secret Folder photo to your Photos library.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choose photos for monthly review or import verified originals into your Secret Folder.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

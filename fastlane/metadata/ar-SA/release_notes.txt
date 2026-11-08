@@ -1,1 +1,3 @@
-الإصدار الأول مع مراجعة الصور الشهرية و«تنظيف مساحة التخزين» و«مراجعة السلة» و«الألبومات المحمية» و«المجلد السري» وأدوات كلمات المرور والبريد الإلكتروني و«التذكيرات الهادئة» وأداة للشاشة الرئيسية وعرض مرافق للساعة.
+Version 0.1.0 keeps KOTOROOM polished and reliable.
+• Stability and performance improvements
+• Small refinements throughout the app

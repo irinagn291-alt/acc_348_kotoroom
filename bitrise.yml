@@ -304,10 +304,14 @@ workflows:
             find fastlane/metadata -name name.txt -delete
             echo "Dropped name.txt so deliver will not post a listing name."
 
-            # App Review notes go out only from Process 2.1, through the API.
-            # A normal release must not post them.
-            find fastlane/metadata -path '*/review_information/notes.txt' -delete
-            echo "Dropped App Review notes so deliver will not post them."
+            # Prepared packages contain reviewed notes. The locale patch checks
+            # their checksum before upload; legacy releases retain their policy.
+            if [ -f fastlane/prepared-metadata.json ]; then
+              echo "Keeping reviewed App Review notes from preparation."
+            else
+              find fastlane/metadata -path '*/review_information/notes.txt' -delete
+              echo "Dropped App Review notes so deliver will not post them."
+            fi
 
             PHONE="fastlane/metadata/review_information/phone_number.txt"
             if [ ! -f "$PHONE" ]; then

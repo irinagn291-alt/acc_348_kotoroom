@@ -1,15 +1,35 @@
 # Managed by gambling-factory. English source copy and stale locale folders
 # may remain on disk, but only the Task's languages may reach App Store Connect.
 require "json"
+require "digest"
 
 module GFDeliverLocales
+  class << self
+    attr_accessor :release_notes_only
+  end
+
   def self.load(path)
+    @release_notes_only = false
     @locales = nil
     codes = JSON.parse(File.read(path))
     unless codes.is_a?(Array) && !codes.empty? && codes.all? { |code| code.is_a?(String) && code.match?(/\A[a-z]{2,3}(?:-[A-Za-z0-9]+)*\z/) }
       raise "Invalid Task locales in #{path}; set the Task's primary language before uploading."
     end
     @locales = codes.uniq.freeze
+    prepared = File.join(File.dirname(path), "prepared-metadata.json")
+    if File.file?(prepared)
+      receipt = JSON.parse(File.read(prepared))
+      raise "Prepared metadata languages changed; return to preparation." unless receipt["locales"] == @locales
+      files = receipt.fetch("files")
+      raise "Prepared metadata has no files." if files.empty?
+      root = File.realpath(File.dirname(path))
+      files.each do |relative, checksum|
+        file = File.expand_path(relative, root)
+        unless File.file?(file) && File.realpath(file).start_with?(root + "/") && Digest::SHA256.file(file).hexdigest == checksum
+          raise "Prepared metadata missing or changed: #{relative}"
+        end
+      end
+    end
   end
 
   def self.locales
@@ -30,6 +50,35 @@ module GFDeliverLocales
   def self.select_localizations(rows)
     allowed = locales
     rows.select { |row| allowed.include?(row.locale) }
+  end
+
+  def self.upload_release_notes(options)
+    raise "What's New cannot submit a review or upload screenshots." if options[:submit_for_review] || !options[:skip_screenshots]
+    app = Deliver.cache[:app]
+    platform = Spaceship::ConnectAPI::Platform.map(options[:platform])
+    version = app.get_edit_app_store_version(platform: platform)
+    expected = options[:app_version].to_s
+    unless version && !expected.empty? && version.version_string == expected
+      raise "What's New requires editable App Store version #{expected}."
+    end
+    # Validate every file before the first write. Do not load descriptions, App
+    # Info, review details or screenshots from the full listing for an UPDATE.
+    notes = locales.to_h do |locale|
+      path = File.join(options[:metadata_path], locale, "release_notes.txt")
+      text = File.read(path, encoding: "UTF-8").strip
+      raise "What's New is empty for #{locale}." if text.empty?
+      [locale, text]
+    end
+    rows = version.get_app_store_version_localizations
+    notes.each do |locale, text|
+      row = rows.find { |item| item.locale == locale }
+      if row
+        row.update(attributes: { whatsNew: text }) unless row.whats_new == text
+      else
+        version.create_app_store_version_localization(attributes: { locale: locale, whatsNew: text })
+      end
+      FastlaneCore::UI.message("What's New uploaded for #{locale}")
+    end
   end
 end
 
@@ -62,6 +111,7 @@ Deliver::UploadMetadata.prepend(GFDeliverMetadataLocales)
 
 module GFDeliverRunnerLocales
   def upload_metadata
+    return GFDeliverLocales.upload_release_notes(options) if GFDeliverLocales.release_notes_only && !options[:skip_metadata]
     result = super
     return result if options[:skip_metadata]
 

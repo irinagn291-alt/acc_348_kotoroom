@@ -82,6 +82,11 @@ struct PasswordMaker: View {
     @State private var value = ""
     @State private var copied = false
     @Environment(\.scenePhase) private var phase
+    #if DEBUG
+    init() {
+        if StoreCaptureLaunch.isEnabled { _value = State(initialValue: "pR7!mK9#vT4@nW6$yE8+") }
+    }
+    #endif
     var body: some View {
         ToolPage(title: DeskTool.generatePassword.title, folio: "Offline / 01") {
             PaperCard {

@@ -30,9 +30,9 @@ module GFDeliverScreenshotFix
   def upload(options, screenshots)
     # Bound the whole screenshot phase, including queue workers, Apple 500s,
     # processing and retries. The per-processing timeout alone cannot do that.
-    Timeout.timeout(15 * 60) { super }
+    Timeout.timeout(75 * 60) { super }
   rescue Timeout::Error
-    FastlaneCore::UI.user_error!("App Store screenshot upload timed out after 15 minutes. Apple may still be processing uploaded files. Retry Upload listing when Apple responds.")
+    FastlaneCore::UI.user_error!("App Store screenshot upload timed out after 75 minutes. Apple may still be processing uploaded files. Retry Upload listing when Apple responds.")
   end
 
   def upload_screenshots(localizations, screenshots_per_language, timeout_seconds, tries: 2)
@@ -40,7 +40,7 @@ module GFDeliverScreenshotFix
   end
 
   def wait_for_complete(iterator, timeout_seconds)
-    start_time = Time.now
+    start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     loop do
       number_of_screenshots_missing_checksum = 0
       states = iterator.each_app_screenshot.map { |_, _, app_screenshot| app_screenshot }.each_with_object({}) do |app_screenshot, hash|
@@ -53,9 +53,10 @@ module GFDeliverScreenshotFix
       is_processing = states.fetch("UPLOAD_COMPLETE", 0) > 0 || number_of_screenshots_missing_checksum > 0
       return states unless is_processing
 
-      if Time.now - start_time > timeout_seconds
-        FastlaneCore::UI.important("Screenshot upload reached the timeout limit of #{timeout_seconds} seconds. We'll now retry uploading the screenshots that couldn't be uploaded in time.")
-        return states
+      if Process.clock_gettime(Process::CLOCK_MONOTONIC) - start_time >= timeout_seconds
+        # These files have already reached Apple. Deleting and re-uploading
+        # them restarts processing and can turn a slow queue into a retry loop.
+        FastlaneCore::UI.user_error!("App Store screenshot processing timed out after #{timeout_seconds / 60} minutes. Uploaded files were left on Apple to finish processing. Retry Upload listing when Apple responds.")
       end
 
       if number_of_screenshots_missing_checksum > 0

@@ -1,0 +1,51 @@
+{
+  "theme": "The personal photo atelier",
+  "background_prompt": "An original premium photographic still life about curating a personal photo archive. Deep forest-green textured felt and rich muted green shadows, softly lit warm ivory archival paper and a small open photographic storage box. A few beautiful coastal, botanical and family-life photographs without identifiable people lie naturally at the far lower corners and side edges, including one subtle pair of identical photo prints to suggest sorting. Refined tactile paper edges and warm brass photo-archive details, elegant evening studio light. The central vertical corridor and the entire upper quarter remain calm and dark for a large headline and a device to be composited later. Visually rich and polished at the edges, quiet and coherent behind the typography. No lettering, numbers, logo, text, watermark, phone, tablet, watch, device, screen, UI, digital frame or placeholder. No unrelated kitchen or stationery setup. Full-bleed portrait composition.",
+  "ink": "light",
+  "font": "serif",
+  "align": "left",
+  "slides": [
+    {
+      "id": "photo-desk",
+      "evidence": "The KOTOROOM photo desk shows November progress, printed-photo previews and a Continue reviewing button.",
+      "headline": "Make room for your memories",
+      "emphasis": "memories",
+      "subtitle": "Continue your monthly photo review"
+    },
+    {
+      "id": "month-index",
+      "evidence": "Six month cards from June to November show photo thumbnails and remaining-review counts.",
+      "headline": "Your photos, month by month",
+      "emphasis": "month",
+      "subtitle": "Find your next photo review"
+    },
+    {
+      "id": "monthly-review",
+      "evidence": "A full coastal photograph appears with November progress and Bin, Keep and Undo controls.",
+      "headline": "Keep the moments that matter",
+      "emphasis": "Keep",
+      "subtitle": "Choose what stays in Photos"
+    },
+    {
+      "id": "storage-cleanup",
+      "evidence": "Storage cleanup lists exact duplicate sets and a review-bin entry.",
+      "headline": "Find the copies taking space",
+      "emphasis": "copies",
+      "subtitle": "Review exact duplicate collections"
+    },
+    {
+      "id": "review-bin",
+      "evidence": "A grid of six queued photos is shown above Keep and Delete from Photos actions.",
+      "headline": "Review before you let go",
+      "emphasis": "Review",
+      "subtitle": "Check every photo before deleting"
+    },
+    {
+      "id": "password-generator",
+      "evidence": "A generated password is shown with length, number and symbol settings and a Copy password action.",
+      "headline": "Fresh passwords, generated on your iPhone",
+      "emphasis": "Fresh",
+      "subtitle": "Choose length, numbers and symbols"
+    }
+  ]
+}
